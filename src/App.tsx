@@ -167,7 +167,8 @@ function App() {
       guesses.length < MAX_CHALLENGES &&
       !isGameWon
     ) {
-      setCurrentGuess(`${currentGuess}${value}`)
+      let newGuess = currentGuess.concat([value])
+      setCurrentGuess(newGuess)
     }
   }
 
@@ -188,7 +189,7 @@ function App() {
     }
 
     // allow "invalid" words in easy mode
-    if (!isWordInWordList(currentGuess) && !isEasyMode) {
+    if (!isWordInWordList(currentGuess.join('')) && !isEasyMode) {
       showErrorAlert(WORD_NOT_FOUND_MESSAGE)
       setCurrentRowClass('jiggle')
       return setTimeout(() => {
@@ -219,7 +220,7 @@ function App() {
       setIsRevealing(false)
     }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
 
-    const winningWord = isWinningWord(currentGuess)
+    const winningWord = isWinningWord(currentGuess.join(''))
 
     if (
       currentGuess.length === MAX_WORD_LENGTH &&
