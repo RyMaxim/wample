@@ -3,3 +3,7 @@ export const MAX_CHALLENGES = 6
 export const ALERT_TIME_MS = 2000
 export const REVEAL_TIME_MS = 350
 export const GAME_LOST_INFO_DELAY = (MAX_WORD_LENGTH + 1) * REVEAL_TIME_MS
+export const NORMALIZATION = 'NFKD' // whether to apply Unicode normalization to words and orthography - options: 'NFC', 'NFD', 'NKFC', 'NKFD', false
+export const LANGUAGE = 'Wôpanâôt8âôk' // This changes the display name for your language
+export const AUTHOR = 'Wôpanâak Language Reclamation Project' // Put your name here so people know who made this Wordle!
+export const AUTHOR_WEBSITE = 'https://www.wlrp.org/' // Put a link to your website or social media here

@@ -1,20 +1,25 @@
 import { solution } from './words'
+import { ORTHOGRAPHY } from '../constants/orthography'
+import { ORTHOGRAPHY_PATTERN } from './tokenizer'
 
 export type CharStatus = 'absent' | 'present' | 'correct'
+
+export type CharValue = typeof ORTHOGRAPHY[number]
 
 export const getStatuses = (
   guesses: string[]
 ): { [key: string]: CharStatus } => {
   const charObj: { [key: string]: CharStatus } = {}
+  const solutionChars = solution.split(ORTHOGRAPHY_PATTERN).filter((i) => i)
 
   guesses.forEach((word) => {
     word.split('').forEach((letter, i) => {
-      if (!solution.includes(letter)) {
+      if (!solutionChars.includes(letter)) {
         // make status absent
         return (charObj[letter] = 'absent')
       }
 
-      if (letter === solution[i]) {
+      if (letter === solutionChars[i]) {
         //make status correct
         return (charObj[letter] = 'correct')
       }
