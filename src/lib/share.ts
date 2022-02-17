@@ -23,7 +23,6 @@ export const generateEmojiGrid = (guesses: string[][]) => {
       const status = getGuessStatuses(guess)
       const isHighContrast = getStoredIsHighContrastMode()
       return guess
-        .split('')
         .map((_, i) => {
           switch (status[i]) {
             case 'correct':
