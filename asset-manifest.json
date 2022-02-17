@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wample/static/css/main.fe7bce7b.css",
-    "main.js": "/wample/static/js/main.c467883b.js",
+    "main.js": "/wample/static/js/main.a4606c48.js",
     "static/js/787.35f35401.chunk.js": "/wample/static/js/787.35f35401.chunk.js",
     "index.html": "/wample/index.html",
     "main.fe7bce7b.css.map": "/wample/static/css/main.fe7bce7b.css.map",
-    "main.c467883b.js.map": "/wample/static/js/main.c467883b.js.map",
+    "main.a4606c48.js.map": "/wample/static/js/main.a4606c48.js.map",
     "787.35f35401.chunk.js.map": "/wample/static/js/787.35f35401.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe7bce7b.css",
-    "static/js/main.c467883b.js"
+    "static/js/main.a4606c48.js"
   ]
 }
