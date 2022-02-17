@@ -13,8 +13,8 @@ export const CORRECT_WORD_MESSAGE = (solution: string) =>
 //  `Must use ${guess} in position ${position}`
 //export const NOT_CONTAINED_MESSAGE = (letter: string) =>
 //  `Guess must contain ${letter}`
-export const ENTER_TEXT = 'Enter'
-export const DELETE_TEXT = 'Delete'
+export const ENTER_TEXT = 'ENTER'
+export const DELETE_TEXT = 'DELETE'
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'

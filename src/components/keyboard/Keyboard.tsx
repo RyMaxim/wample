@@ -81,7 +81,7 @@ export const Keyboard = ({
         ))}
       </div>
       <div className="flex justify-center">
-        <Key width={80} value="ENTER" onClick={onClick}>
+        <Key width={65.4} value="ENTER" onClick={onClick} status="input">
           {ENTER_TEXT}
         </Key>
         {ORTHOGRAPHY.slice(
@@ -96,7 +96,7 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-        <Key width={80} value="DELETE" onClick={onClick}>
+        <Key width={65.4} value="DELETE" onClick={onClick} status="input">
           {DELETE_TEXT}
         </Key>
       </div>
