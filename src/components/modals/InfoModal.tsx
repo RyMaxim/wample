@@ -60,7 +60,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <br />
       <hr />
       <p className="mt-6 text-base text-gray-500 dark:text-gray-300">
-        This is an open source clone of the game Wordle adapted to {LANGUAGE} by
+        This is a clone of the game Wordle adapted to {LANGUAGE} by
         <br />
         <a href={AUTHOR_WEBSITE} className="underline font-bold">
           {AUTHOR}
