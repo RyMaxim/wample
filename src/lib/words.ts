@@ -5,10 +5,7 @@ import { VALID_GUESSES } from '../constants/validGuesses'
 //import { getGuessStatuses } from './statuses'
 
 export const isWordInWordList = (word: string) => {
-  return (
-    WORDS.includes(word.toLowerCase()) ||
-    VALID_GUESSES.includes(word.toLowerCase())
-  )
+  return WORDS.includes(word) || VALIDGUESSES.includes(word)
 }
 
 export const isWinningWord = (word: string) => {
@@ -64,7 +61,7 @@ export const getWordOfDay = () => {
   const nextday = (index + 1) * msInDay + epochMs
 
   return {
-    solution: WORDS[index % WORDS.length].toUpperCase(),
+    solution: WORDS[index % WORDS.length],
     solutionIndex: index,
     tomorrow: nextday,
   }

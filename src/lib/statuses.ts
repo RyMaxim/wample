@@ -11,7 +11,6 @@ export const getStatuses = (
 ): { [key: string]: CharStatus } => {
   const charObj: { [key: string]: CharStatus } = {}
   const solutionChars = solution.split(ORTHOGRAPHY_PATTERN).filter((i) => i)
-
   guesses.forEach((word) => {
     word.forEach((letter, i) => {
       if (!solutionChars.includes(letter)) {
