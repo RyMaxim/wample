@@ -16,7 +16,7 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
-  HARD_MODE_ALERT_MESSAGE,
+  EASY_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -88,9 +88,9 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
 
-  const [isHardMode, setIsHardMode] = useState(
+  const [isEasyMode, setIsEasyMode] = useState(
     localStorage.getItem('gameMode')
-      ? localStorage.getItem('gameMode') === 'hard'
+      ? localStorage.getItem('gameMode') === 'easy'
       : false
   )
 
@@ -121,12 +121,12 @@ function App() {
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }
 
-  const handleHardMode = (isHard: boolean) => {
-    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'hard') {
-      setIsHardMode(isHard)
-      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+  const handleEasyMode = (isEasy: boolean) => {
+    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'easy') {
+      setIsEasyMode(isEasy)
+      localStorage.setItem('gameMode', isEasy ? 'easy' : 'normal')
     } else {
-      showErrorAlert(HARD_MODE_ALERT_MESSAGE)
+      showErrorAlert(EASY_MODE_ALERT_MESSAGE)
     }
   }
 
@@ -184,7 +184,8 @@ function App() {
       }, ALERT_TIME_MS)
     }
 
-    if (!isWordInWordList(currentGuess)) {
+    // allow "invalid" words in easy mode
+    if (!isWordInWordList(currentGuess) && !isEasyMode) {
       showErrorAlert(WORD_NOT_FOUND_MESSAGE)
       setCurrentRowClass('jiggle')
       return setTimeout(() => {
@@ -192,17 +193,21 @@ function App() {
       }, ALERT_TIME_MS)
     }
 
-    // enforce hard mode - all guesses must contain all previously revealed letters
-    if (isHardMode) {
-      const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
-      if (firstMissingReveal) {
-        showErrorAlert(firstMissingReveal)
-        setCurrentRowClass('jiggle')
-        return setTimeout(() => {
-          setCurrentRowClass('')
-        }, ALERT_TIME_MS)
-      }
-    }
+    /**
+    * commenting out this block for now to enable easy mode
+    * might bring back hard mode later
+    * // enforce hard mode - word does not have to match words list
+    *if (isHardMode) {
+    *  const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
+    *  if (firstMissingReveal) {
+    *    showErrorAlert(firstMissingReveal)
+    *    setCurrentRowClass('jiggle')
+    *    return setTimeout(() => {
+    *      setCurrentRowClass('')
+    *    }, ALERT_TIME_MS)
+    *  }
+    * }
+    */
 
     setIsRevealing(true)
     // turn this back off after all
@@ -281,13 +286,13 @@ function App() {
         isGameLost={isGameLost}
         isGameWon={isGameWon}
         handleShare={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
-        isHardMode={isHardMode}
+        isEasyMode={isEasyMode}
       />
       <SettingsModal
         isOpen={isSettingsModalOpen}
         handleClose={() => setIsSettingsModalOpen(false)}
-        isHardMode={isHardMode}
-        handleHardMode={handleHardMode}
+        isEasyMode={isEasyMode}
+        handleEasyMode={handleEasyMode}
         isDarkMode={isDarkMode}
         handleDarkMode={handleDarkMode}
         isHighContrastMode={isHighContrastMode}
