@@ -13,7 +13,7 @@ export const getStatuses = (
   const solutionChars = solution.split(ORTHOGRAPHY_PATTERN).filter((i) => i)
 
   guesses.forEach((word) => {
-    word.split('').forEach((letter, i) => {
+    word.forEach((letter, i) => {
       if (!solutionChars.includes(letter)) {
         // make status absent
         return (charObj[letter] = 'absent')
@@ -35,8 +35,8 @@ export const getStatuses = (
 }
 
 export const getGuessStatuses = (guess: string): CharStatus[] => {
-  const splitSolution = solution.split('')
-  const splitGuess = guess.split('')
+  const splitSolution = solution.split(ORTHOGRAPHY_PATTERN).filter((i) => i)
+  const splitGuess = guess
 
   const solutionCharsTaken = splitSolution.map((_) => false)
 

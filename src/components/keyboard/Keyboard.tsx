@@ -1,6 +1,7 @@
 import { getStatuses } from '../../lib/statuses'
 import { Key } from './Key'
 import { useEffect } from 'react'
+import { ORTHOGRAPHY } from '../../constants/orthography'
 import { ENTER_TEXT, DELETE_TEXT } from '../../constants/strings'
 
 type Props = {
@@ -52,18 +53,23 @@ export const Keyboard = ({
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
-          <Key
-            value={key}
-            key={key}
-            onClick={onClick}
-            status={charStatuses[key]}
-            isRevealing={isRevealing}
-          />
-        ))}
+        {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
+          (char) => (
+            <Key
+              value={key}
+              key={key}
+              onClick={onClick}
+              status={charStatuses[key]}
+              isRevealing={isRevealing}
+            />
+          )
+        )}
       </div>
       <div className="flex justify-center mb-1">
-        {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((key) => (
+        {ORTHOGRAPHY.slice(
+          Math.floor(ORTHOGRAPHY.length * 0.4),
+          Math.floor(ORTHOGRAPHY.length * 0.7)
+        ).map((char) => (
           <Key
             value={key}
             key={key}
@@ -77,7 +83,10 @@ export const Keyboard = ({
         <Key width={65.4} value="ENTER" onClick={onClick}>
           {ENTER_TEXT}
         </Key>
-        {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
+        {ORTHOGRAPHY.slice(
+          Math.floor(ORTHOGRAPHY.length * 0.7),
+          ORTHOGRAPHY.length
+        ).map((char) => (
           <Key
             value={key}
             key={key}
