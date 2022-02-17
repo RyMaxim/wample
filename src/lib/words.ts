@@ -20,7 +20,7 @@ export const isWinningWord = (word: string) => {
 // guess must use correct letters in that space and any other revealed letters
 // also check if all revealed instances of a letter are used (i.e. two C's)
 /**
- *export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
+ *export const findFirstUnusedReveal = (word: string, guesses: string[][]) => {
  *  if (guesses.length === 0) {
  *    return false
  *  }

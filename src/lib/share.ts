@@ -5,7 +5,7 @@ import { getStoredIsHighContrastMode } from './localStorage'
 import { MAX_CHALLENGES } from '../constants/settings'
 
 export const shareStatus = (
-  guesses: string[],
+  guesses: string[][],
   lost: boolean,
   isEasyMode: boolean
 ) => {
@@ -17,7 +17,7 @@ export const shareStatus = (
   )
 }
 
-export const generateEmojiGrid = (guesses: string[]) => {
+export const generateEmojiGrid = (guesses: string[][]) => {
   return guesses
     .map((guess) => {
       const status = getGuessStatuses(guess)
