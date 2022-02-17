@@ -125,7 +125,7 @@ function App() {
   }
 
   const handleEasyMode = (isEasy: boolean) => {
-    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'easy') {
+    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'normal') {
       setIsEasyMode(isEasy)
       localStorage.setItem('gameMode', isEasy ? 'easy' : 'normal')
     } else {

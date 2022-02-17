@@ -5,7 +5,7 @@ export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
 export const WORD_NOT_FOUND_MESSAGE = 'Word not found'
 export const EASY_MODE_ALERT_MESSAGE =
-  'Easy Mode can only be enabled at the start!'
+  'Easy Mode can not be turned off mid-game!'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `The word was ${solution}`
 // save this for hard mode
