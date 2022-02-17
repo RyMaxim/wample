@@ -58,12 +58,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         The letter <strong>a</strong> is not in the word in any spot.
       </p>
 
-      <p className="mt-6 text-base text-gray-500 dark:text-gray-300">
-        This is an open source clone of the game Wordle adapted to
-        {LANGUAGE} by
+      <hr />
+
+      <p className="mt-6 text-sm text-gray-500 dark:text-gray-300">
+        This is an open source clone of the game Wordle adapted to {LANGUAGE} by{' '}
         <a href={AUTHOR_WEBSITE} className="underline font-bold">
-          {AUTHOR}.
-        </a>{' '}
+          {AUTHOR}
+        </a>
+        .
       </p>
     </BaseModal>
   )
