@@ -1,6 +1,6 @@
 import { NORMALIZATION } from './settings'
 
-export const VALIDGUESSES = [
+export const VALID_GUESSES = [
   'pawâw',
   'wunôk',
   'mônâk',
@@ -24,7 +24,7 @@ export const VALIDGUESSES = [
 ]
 
 if (NORMALIZATION) {
-  VALIDGUESSES.forEach(
-    (val, i) => (VALIDGUESSES[i] = val.normalize(NORMALIZATION))
+  VALID_GUESSES.forEach(
+    (val, i) => (VALID_GUESSES[i] = val.normalize(NORMALIZATION))
   )
 }

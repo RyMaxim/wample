@@ -194,20 +194,20 @@ function App() {
     }
 
     /**
-    * commenting out this block for now to enable easy mode
-    * might bring back hard mode later
-    * // enforce hard mode - word does not have to match words list
-    *if (isHardMode) {
-    *  const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
-    *  if (firstMissingReveal) {
-    *    showErrorAlert(firstMissingReveal)
-    *    setCurrentRowClass('jiggle')
-    *    return setTimeout(() => {
-    *      setCurrentRowClass('')
-    *    }, ALERT_TIME_MS)
-    *  }
-    * }
-    */
+     * commenting out this block for now to enable easy mode
+     * might bring back hard mode later
+     * // enforce hard mode - word does not have to match words list
+     *if (isHardMode) {
+     *  const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
+     *  if (firstMissingReveal) {
+     *    showErrorAlert(firstMissingReveal)
+     *    setCurrentRowClass('jiggle')
+     *    return setTimeout(() => {
+     *      setCurrentRowClass('')
+     *    }, ALERT_TIME_MS)
+     *  }
+     * }
+     */
 
     setIsRevealing(true)
     // turn this back off after all
