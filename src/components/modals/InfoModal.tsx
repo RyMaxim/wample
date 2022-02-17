@@ -1,5 +1,6 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import { LANGUAGE, AUTHOR, AUTHOR_WEBSITE } from '../../constants/settings'
 
 type Props = {
   isOpen: boolean
@@ -18,53 +19,50 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="W"
+          value="w"
           status="correct"
         />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
+        <Cell value="u" />
+        <Cell value="n" />
+        <Cell value="ô" />
+        <Cell value="k" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
+        The letter <strong>w</strong> is in the word and in the correct spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
+        <Cell value="ch" />
+        <Cell value="8" />
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="L"
+          value="k"
           status="present"
         />
-        <Cell value="O" />
-        <Cell value="T" />
+        <Cell value="u" />
+        <Cell value="n" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
+        The letter <strong>k</strong> is in the word but in the wrong spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
-        <Cell value="G" />
-        <Cell isRevealing={true} isCompleted={true} value="U" status="absent" />
-        <Cell value="E" />
+        <Cell value="ty" />
+        <Cell value="â" />
+        <Cell value="q" />
+        <Cell isRevealing={true} isCompleted={true} value="a" status="absent" />
+        <Cell value="s" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
+        The letter <strong>a</strong> is not in the word in any spot.
       </p>
 
-      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-        This is an open source version of the word guessing game we all know and
-        love -{' '}
-        <a
-          href="https://github.com/cwackerfuss/react-wordle"
-          className="underline font-bold"
-        >
-          check out the code here
+      <p className="mt-6 text-base text-gray-500 dark:text-gray-300">
+        This is an open source clone of the game Wordle adapted to
+        {LANGUAGE} by
+        <a href={AUTHOR_WEBSITE} className="underline font-bold">
+          {AUTHOR}.
         </a>{' '}
       </p>
     </BaseModal>

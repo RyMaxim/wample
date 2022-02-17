@@ -4,7 +4,7 @@ import App from './App'
 import { ORTHOGRAPHY } from './constants/orthography'
 import { WORDS } from './constants/wordlist'
 import { ORTHOGRAPHY_PATTERN } from './lib/tokenizer'
-import { CONFIG } from './constants/config'
+import { START_DATE } from './constants/settings'
 import { GAME_TITLE } from './constants/strings'
 
 beforeEach(() => {
@@ -39,5 +39,5 @@ test('no surprise characters', () => {
 })
 
 test('date is valid', () => {
-  expect(new Date(CONFIG.startDate).valueOf()).toBeTruthy()
+  expect(new Date(START_DATE).valueOf()).toBeTruthy()
 })

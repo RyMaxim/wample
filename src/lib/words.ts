@@ -1,5 +1,6 @@
 import { WORDS } from '../constants/wordlist'
 import { VALID_GUESSES } from '../constants/validGuesses'
+import { START_DATE } from '../constants/settings'
 // save for hard mode
 //import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
 //import { getGuessStatuses } from './statuses'
@@ -54,7 +55,7 @@ export const isWinningWord = (word: string) => {
 
 export const getWordOfDay = () => {
   // January 1, 2022 Game Epoch
-  const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
+  const epochMs = new Date(START_DATE).valueOf()
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
