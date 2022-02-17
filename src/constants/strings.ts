@@ -8,10 +8,11 @@ export const EASY_MODE_ALERT_MESSAGE =
   'Easy Mode can only be enabled at the start!'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `The word was ${solution}`
-export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
-  `Must use ${guess} in position ${position}`
-export const NOT_CONTAINED_MESSAGE = (letter: string) =>
-  `Guess must contain ${letter}`
+// save this for hard mode
+//export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
+//  `Must use ${guess} in position ${position}`
+//export const NOT_CONTAINED_MESSAGE = (letter: string) =>
+//  `Guess must contain ${letter}`
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'Statistics'

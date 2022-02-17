@@ -1,7 +1,8 @@
 import { WORDS } from '../constants/wordlist'
 import { VALID_GUESSES } from '../constants/validGuesses'
-import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
-import { getGuessStatuses } from './statuses'
+// save for hard mode
+//import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
+//import { getGuessStatuses } from './statuses'
 
 export const isWordInWordList = (word: string) => {
   return (
@@ -14,6 +15,7 @@ export const isWinningWord = (word: string) => {
   return solution === word
 }
 
+// save for hard mode
 // build a set of previously revealed letters - present and correct
 // guess must use correct letters in that space and any other revealed letters
 // also check if all revealed instances of a letter are used (i.e. two C's)
