@@ -29,7 +29,8 @@ import {
   isWordInWordList,
   isWinningWord,
   solution,
-  findFirstUnusedReveal,
+  // saving this for hard mode
+  // findFirstUnusedReveal,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
