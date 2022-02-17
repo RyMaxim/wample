@@ -37,12 +37,13 @@ export const Keyboard = ({
         onEnter()
       } else if (e.code === 'Backspace') {
         onDelete()
-      } else {
-        const key = e.key.toUpperCase()
-        if (key.length === 1 && key >= 'A' && key <= 'Z') {
-          onChar(key)
-        }
-      }
+      } //
+      // Take away key event listener for now
+      // else {
+      //   const key = e.key.toUpperCase()
+      //   if (key.length === 1 && key >= 'A' && key <= 'Z') {
+      //     onChar(key)
+      //   }
     }
     window.addEventListener('keyup', listener)
     return () => {
@@ -56,10 +57,10 @@ export const Keyboard = ({
         {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
           (char) => (
             <Key
-              value={key}
-              key={key}
+              value={char}
+              key={char}
               onClick={onClick}
-              status={charStatuses[key]}
+              status={charStatuses[char]}
               isRevealing={isRevealing}
             />
           )
@@ -71,10 +72,10 @@ export const Keyboard = ({
           Math.floor(ORTHOGRAPHY.length * 0.7)
         ).map((char) => (
           <Key
-            value={key}
-            key={key}
+            value={char}
+            key={char}
             onClick={onClick}
-            status={charStatuses[key]}
+            status={charStatuses[char]}
             isRevealing={isRevealing}
           />
         ))}
@@ -88,10 +89,10 @@ export const Keyboard = ({
           ORTHOGRAPHY.length
         ).map((char) => (
           <Key
-            value={key}
-            key={key}
+            value={char}
+            key={char}
             onClick={onClick}
-            status={charStatuses[key]}
+            status={charStatuses[char]}
             isRevealing={isRevealing}
           />
         ))}
