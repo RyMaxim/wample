@@ -9,7 +9,7 @@ export const EASY_MODE_ALERT_MESSAGE =
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `The word was ${solution}`
 // save this for hard mode
-//export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
+//export const WRONG_SPOT_MESSAGE = (guess: string[], position: number) =>
 //  `Must use ${guess} in position ${position}`
 //export const NOT_CONTAINED_MESSAGE = (letter: string) =>
 //  `Guess must contain ${letter}`

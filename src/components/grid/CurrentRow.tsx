@@ -2,12 +2,12 @@ import { MAX_WORD_LENGTH } from '../../constants/settings'
 import { Cell } from './Cell'
 
 type Props = {
-  guess: string
+  guess: string[]
   className: string
 }
 
 export const CurrentRow = ({ guess, className }: Props) => {
-  const splitGuess = guess.split('')
+  const splitGuess = guess
   const emptyCells = Array.from(Array(MAX_WORD_LENGTH - splitGuess.length))
   const classes = `flex justify-center mb-1 ${className}`
 
