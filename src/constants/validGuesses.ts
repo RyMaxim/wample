@@ -6,7 +6,6 @@ export const VALID_GUESSES = [
   'mônâk',
   'tyâqas',
   'kunâm',
-  'muhtuq',
   'munah',
   'peetôk',
   'nôkôp',

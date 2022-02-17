@@ -6,7 +6,6 @@ export const WORDS = [
   'mônâk',
   'tyâqas',
   'kunâm',
-  'muhtuq',
   'munah',
   'peetôk',
   'nôkôp',
