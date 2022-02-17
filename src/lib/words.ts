@@ -5,7 +5,7 @@ import { VALID_GUESSES } from '../constants/validGuesses'
 //import { getGuessStatuses } from './statuses'
 
 export const isWordInWordList = (word: string) => {
-  return WORDS.includes(word) || VALIDGUESSES.includes(word)
+  return WORDS.includes(word) || VALID_GUESSES.includes(word)
 }
 
 export const isWinningWord = (word: string) => {
