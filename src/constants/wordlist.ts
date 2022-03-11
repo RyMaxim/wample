@@ -66,7 +66,7 @@ export const WORDS = [
   'm8sây',
   'keenây',
   'achâôk',
-  'âhânu ',
+  'âhânu',
   'anâhs',
   'meeqan',
   'manut',

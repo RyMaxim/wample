@@ -66,7 +66,7 @@ export const VALID_GUESSES = [
   'm8sây',
   'keenây',
   'achâôk',
-  'âhânu ',
+  'âhânu',
   'anâhs',
   'meeqan',
   'manut',
