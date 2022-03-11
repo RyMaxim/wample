@@ -57,7 +57,7 @@ export const WORDS = [
   'ahtaw',
   'musun',
   'sôtyum',
-  'nôkan ',
+  'nôkan',
   'weekan',
   'qeeqôn',
   'pôqây',

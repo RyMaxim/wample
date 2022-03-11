@@ -57,7 +57,7 @@ export const VALID_GUESSES = [
   'ahtaw',
   'musun',
   'sôtyum',
-  'nôkan ',
+  'nôkan',
   'weekan',
   'qeeqôn',
   'pôqây',
